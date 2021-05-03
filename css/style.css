@@ -1,0 +1,212 @@
+/*Прикладывать ссылку на мерджери фулл реквест гит*/
+
+/*HEADER*/
+
+
+.header{
+    background-color: rgb(0, 0, 0);
+    padding: 18px 0 19px 0;
+    /*18 отвечает за top
+    0 отвечает за справа
+    19 отвечает за отступ снизу
+    0 отвечает за отступ слева*/
+}
+
+.container {
+    /*outline: 1px solid red; /*красная обводка*/
+    max-width: 1160px; /*Ограничение 1140px*/
+    /*padding: 0 10px; /*Нужен для того, чтобы на всех устройствах был отступ*/
+    width: 100%; 
+    margin: 0 auto; /*Централизуем*/
+}
+
+.header__container {
+    display: flex; /*Выравнивание*/
+    justify-content: space-between; /*Растаскивает по краям, краешек к краюшку*/
+    /*justify-content: space-around; /*По бокам на половину этого контейнера - то есть половинку вставляет влево и вправо*/
+    /*justify-content: space-evenly; /*Полноценные блоки растаскивает, блоки вставляет между краями и началом блока*/
+}
+
+/*.header__left,
+.header__right{
+    outline: 1px solid green;
+    width: 200px; /*Длина 200 пикселей
+}*/
+
+/* Group 2 */
+
+.header__logo{
+    margin: 0 41px 0 0;
+}
+
+/*Обратись к ссылкам внутри блока и добавь это правило всем, кроме последнего элемента*/
+.header__nav a:not(:last-child) {
+    margin: 0 33px 0 0; /*Отступ в 33px*/
+}
+
+/*PROMO F1E4E6*/
+
+.promo {
+    background-color: #ecaeb8;
+    margin: 0 0 20px 0;
+}
+
+/*Делаем строго фиксированную высоту, но сделаем это только сейчас*/
+.promo__container {
+    min-height: 764px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-end;
+    background: url('../img/man.png') no-repeat;
+    background-position: -228px bottom ; /*Привязываем изображение к нижнему краю нашего блока*/
+    /*outline: 1px solid green;*/
+    align-items: center;
+}
+
+.promo__text{
+    font-family: sans-serif;
+    max-width: 377px;
+    width: 50%;
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    border-left: 12px solid #f16d7f;
+    /*Отделяем ее на 15 пикселей*/
+    padding: 0 0 0 15px;
+}
+
+.promo__text h1{
+    font-family: sans-serif;
+    margin: 0; /*Сбрасываем*/
+    padding: 0; /*Исправления Артефакта*/
+    color: black;
+}
+
+.promo__text .promo__decor{
+    color: crimson;
+}
+
+.promo__text h1 span{
+    font-size: 19px;
+    color: black;
+}
+
+/*PRODUCT*/
+
+.product__container {
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/
+    flex-wrap: wrap; /*wrap свойства для переноса*/
+    justify-content: space-between;
+    gap: 30px; /*Между дочерними контейнерами сделай расстояние в 30 пикселей*/
+}
+
+/*Мы можем обратить внимание что у нас текст не по центру*/
+.product__card  {
+    overflow: hidden; /*+*/
+     /*display: flex;Потом удали*/
+    justify-content: center;
+    align-items: center; /*+*/
+    position: relative;
+    display: inline-block;
+}
+
+.product__card img {
+    height: 100%;
+    width: 100%;
+  }
+
+.product__card:not(:last-child) { /*Кроме последней*/
+    width: 30%; /*Поставим ширину контейнера 30%*/
+    /*Грубо говоря эти контейнеры будут в притык к друг другу, а теперь*/
+    outline: 1px solid rebeccapurple;
+}
+
+.product__card:last-child {/*Обратимся к последней*/
+    width: 100%;
+    outline: 1px solid olivedrab;
+}
+
+.product__card h1, 
+.product__card span{
+    display: block;
+    color: rgb(255 141 159);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.promo__blockDecor{
+    color: crimson;
+}
+ 
+.product__card h2{
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 33.33px;
+    width: 100%;
+    padding: 0 0 33.33px 0px;
+    color: white;
+}
+
+.product__card .product__four__image{
+    text-align: center;
+    font: 1em sans-serif;
+    font-size: 23px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    width: 100%;
+    padding: 0 0 33.33px 0px;
+}
+
+/*title_items*/
+
+.title_items{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.title_items span{
+    font-family: sans-serif;
+    text-align: center;
+    color: darkgray;
+}
+
+/*Fetured Items*/
+
+.items__container {
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/
+    flex-wrap: wrap; /*wrap свойства для переноса*/
+    justify-content: space-between;
+    gap: 30px; /*Между дочерними контейнерами сделай расстояние в 30 пикселей*/
+    
+}
+
+.items__container img {
+    /*border: 1px solid #333;*/
+    background: #f0f0f0;
+    float: right;
+    padding: 0 0px 161px 0;
+}
+
+.items__container h3 {
+    font-family: sans-serif;
+    position: absolute;
+    padding: 416px 0 35.33px 19px;
+}
+
+.items__container span {
+    font-family: sans-serif;
+    position: absolute;
+    padding: 470px 0 35.33px 19px;
+    width: 20%;
+    color: darkgrey;
+}
+
+.items__sale{
+    font-family: sans-serif;
+    position: absolute;
+    padding: 532px 0 35.33px 19px;
+    width: 20%;
+    color: rgb(216, 64, 64);
+}
