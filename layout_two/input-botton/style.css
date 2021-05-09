@@ -1,0 +1,46 @@
+.form {
+    /*Делаем, чтобы 2 input встали в ряд - строчно*/
+    /*margin 10px не используем, это костыльный метод.*/
+    display: flex;
+    align-items: center; /*Чтобы по высоте были всегда одинаковые*/
+  }
+  
+  /*Замена input дефолдных на красивые*/
+  input {
+    border: none;
+  }
+  
+  
+  .form__email, .form__btn {
+    padding: 20px; /*Размер окна ввести текст и отправить*/
+  }
+  
+  .form__email {
+    background-color: lightgrey; /*Цвет фона введи текст*/
+    border-radius: 20px 0 0 20px; /*Округление углов*/
+  }
+  
+  .form__email:focus {
+    outline: none; /*Убираем фокус, но это не правильно, таб работать не будет*/
+    background-color: rgb(184, 178, 178);
+     transition: All 0.5s;/*Анимация с задержкой фокуса*/
+  }
+  
+  .form__btn {
+   background-color: rgb(94, 94, 94); /*Нашей кнопке мы дадим тоже фон*/
+   color: white; /*Цвет текста*/
+   border-radius: 0 20px 20px 0; /*Округление углов*/
+  }
+  
+  .form__btn:hover {
+    opacity: 0.6; /*При наведение, чтобы кнопка была декоративной*/
+    transition: all 1s; /*Задержка в 1 секунду*/
+    cursor: pointer; /*Показывает палец при наведение на кнопку отправить*/
+    
+  }
+  
+  .form__btn:focus {
+   background-color: rgb(120, 120, 120); /*Нашей кнопке мы дадим тоже фон*/
+   color: white; /*Цвет текста*/
+   border-radius: 0 20px 20px 0; /*Округление углов*/
+  }

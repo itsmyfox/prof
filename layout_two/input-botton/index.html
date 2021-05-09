@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        <fieldset> <fieldset> в отличии от <giv> </div> используют свои стили css + имеют гибкий title
+        Используется для формы регистрации и подобных форм.
+        <label for="test"></label> - Автофокус. Нажмешь на слово Имя - и ты сможешь писать в имени. То есть
+        перейти к имени к которому оно привязано.
+        Удобная фишка для формы регистрации.
+        <em>*</em> - Декоративная крошка. Это нужно для поисковых роботов. Это тег (текст) на который стоит
+        обратить внимание. 
+
+        id="test" - Уникальный айди, повторяется только один раз.
+        placeholder="test" - подсказка - всплывающий текст.
+        autofocus required pattern="\S+[А-яа-я]" - Автофокус текста
+        required - Обязательное поле - нельзя отправить поле не заполнив его. С помощью его можно
+        даже установить минимальное или максимальное значение возраста. required min="5" max="100"
+        pattern - в него вводим легулярное выражение.
+        step="2" - увеличение значение по 2. Настраиваемо.
+
+        <select> <secect> - Выпадающий список. Но его стилизовать не получиться.
+        <select id="gender">
+        <option value="family">Женский</option>
+        <option value="male">Мужской</option>    
+        <secect>
+
+        
+        Свойство css 
+        resize: none; Запретит изменять размер окна текстового поля, не давая его изменять пользователям.
+
+        input type="radio" - Выбрать 1 элемент.
+        input id="name" type="checkbox" - Можно выбрать несколько элементов.
+    -->
+      <div class="form">
+        <input class="form__email" placeholder="Введите текст" type="email" />
+        <input class="form__btn" type="submit" />
+      </div>
+</body>
+</html>
