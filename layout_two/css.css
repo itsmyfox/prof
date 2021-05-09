@@ -1,0 +1,48 @@
+.test {
+    padding: 11px; /* толщина шрифта*/
+    
+    /*outline: 1px solid green; /* рамка */
+    -moz-user-select: -moz-none; /*Чтобы с тестом меню не было взаимодействия*/
+    -o-user-select: none; /*Чтобы с тестом меню не было взаимодействия*/
+    -khtml-user-select: none; /*Чтобы с тестом меню не было взаимодействия*/
+    -webkit-user-select: none; /*Чтобы с тестом меню не было взаимодействия*/
+    user-select: none; /*Чтобы с тестом меню не было взаимодействия*/
+  }
+  
+  .test__title{
+    color: #EF5B70; /*Цвет текста*/
+    text-transform: uppercase; /*Текст капсом*/
+    padding: 5px 0 5px 10px; /*Добавим не большой padding*/
+    border-bottom: 1px solid #6F6E6E; /*Добавим бордер полосочка сбоку*/
+    border-left: 6px solid #EF5B70;
+  }
+  
+  .test2{
+   padding: 0px 0px 0px 10px; /*Добавим не большой padding*/
+   color: #EF5B70; /*Покрасить ссылку в другой цвет*/
+   line-height: 1.5em; /*Расстояние текста снизу сверзу*/
+   text-transform: uppercase; /*Капсом весь текст*/
+   text-decoration: none; /*Убрать подчеркивание ссылки*/
+   clear: both;
+  }
+  
+   a {
+    border-left: 6px solid #EF5B70;
+    color: #FFB3C6; /* Цвет обычной ссылки */
+   }
+   a:visited {
+    color: #9E9E9E; /* Цвет посещенной ссылки */
+   } 
+   a:hover {
+    color: #fff; /* Цвет ссылки при наведении на нее курсора мыши */  
+    background: #0078BF; /* Цвет фона */
+   }
+  
+  /*Существуют пред процессоры, можно их отключать. Например нам не нужно иметь рядом со спойлером треугольник*/
+  summary {
+    display: block;
+  }
+  
+  summary::-webkit-details-market {
+    display: none;
+  }
