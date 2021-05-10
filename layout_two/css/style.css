@@ -1,0 +1,486 @@
+/*Прикладывать ссылку на мерджери фулл реквест гит*/
+
+/*HEADER*/
+
+
+.header{
+    background-color: rgb(0, 0, 0);
+    padding: 18px 0 19px 0;
+    /*18 отвечает за top
+    0 отвечает за справа
+    19 отвечает за отступ снизу
+    0 отвечает за отступ слева*/
+}
+
+.container {
+    /*outline: 1px solid red; /*красная обводка*/
+    max-width: 1160px; /*Ограничение 1140px*/
+    /*padding: 0 10px; /*Нужен для того, чтобы на всех устройствах был отступ*/
+    /*width: 100%; */
+    margin: 0 auto; /*Централизуем*/
+}
+
+.header__container {
+    display: flex; /*Выравнивание*/
+    justify-content: space-between; /*Растаскивает по краям, краешек к краюшку*/
+    /*justify-content: space-around; /*По бокам на половину этого контейнера - то есть половинку вставляет влево и вправо*/
+    /*justify-content: space-evenly; /*Полноценные блоки растаскивает, блоки вставляет между краями и началом блока*/
+}
+
+/*.header__left,
+.header__right{
+    outline: 1px solid green;
+    width: 200px; /*Длина 200 пикселей
+}*/
+
+/* Group 2 */
+
+.header__logo{
+    margin: 0 41px 0 0;
+}
+
+/*Обратись к ссылкам внутри блока и добавь это правило всем, кроме последнего элемента*/
+.header__nav a:not(:last-child) {
+    margin: 0 33px 0 0; /*Отступ в 33px*/
+}
+
+/*PROMO F1E4E6*/
+
+.promo {
+    background-color: #F8F3F4;
+    margin: 0 0 20px 0;
+}
+
+/*Делаем строго фиксированную высоту, но сделаем это только сейчас*/
+.promo__container {
+    min-height: 74px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-start;
+    /*outline: 1px solid green;*/
+    align-items: center;
+}
+
+.promo__cont__class {
+    min-height: 74px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.promo__cont__filter {
+    min-height: 39px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.promo__text{
+    font-family: sans-serif;
+    max-width: 206px;
+    width: 50%;
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    padding: 0 0 0 15px;
+}
+
+.promo__text__block{
+    position: flex;
+    font-family: sans-serif;
+    max-width: 206px;
+    width: 50%;
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    padding: 0 0 0 15px;
+}
+
+.promo__title__h1{
+    font-size: 16px;
+    color: #F16D7F;
+}
+
+.promo__title__category__h1 {
+    font-size: 14px;
+    color: #F16D7F;
+}
+
+.promo__title__category__span {
+    font-size: 14px;
+    color: #a3a3a3;
+}
+
+
+
+.promo__text h1{
+    font-family: sans-serif;
+    margin: 0; /*Сбрасываем*/
+    padding: 0; /*Исправления Артефакта*/
+}
+
+
+/*filter*/
+
+.promo__filter {
+    margin: 0 0 20px 0;
+    color: rgb(0, 0, 0);
+}
+
+.promo__text{
+    color: black;
+}
+
+.promo__h1{
+    font-size: 16px;
+    color: #000000;
+    position: flex;
+    justify-content: flex-end;
+}
+
+
+
+.promo__container__filter {
+    min-height: 148px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-start;
+    /*outline: 1px solid green;*/
+    align-items: center;
+    padding: 0 64% 0 0;
+}
+
+.filter {
+    font-family: sans-serif;
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    padding: 0 0 0 15px;
+}
+
+.filter__img {
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+
+/*trending*/
+
+.promo__container__trending {
+    left: 0.56%;
+    right: 5.38%;
+    top: 36.35%;
+    bottom: 95.12%;
+    position: absolute;
+    min-height: 148px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-start;
+    /*outline: 1px solid green;*/
+    align-items: center;
+}
+
+.promo__container__size {
+    left: 20.56%;
+    right: 5.38%;
+    top: 36.35%;
+    bottom: 95.12%;
+    position: absolute;
+    min-height: 148px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-start;
+    /*outline: 1px solid green;*/
+    align-items: center;
+}
+
+.promo__container__price {
+    left: 33.56%;
+    right: 5.38%;
+    top: 36.35%;
+    bottom: 95.12%;
+    position: absolute;
+    min-height: 148px;
+    /*Выравняем по центру*/
+    display: flex;
+    justify-content: flex-start;
+    /*outline: 1px solid green;*/
+    align-items: center;
+}
+
+/*Квадратик*/
+
+.page {
+    border: 2px solid #EBEBEB;
+    border-radius: 5px 5px 5px 5px; /*Округление углов*/
+    max-width: 436px;
+}
+
+.page__text {
+    padding: 0% 0% 0% 12%;
+    color: grey;
+    font-size: 32px;
+    letter-spacing: 5px;
+}
+
+.trending {
+    font-family: sans-serif;
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    padding: 0 0 0 15px;
+}
+
+.trending__img {
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+
+/*title_items*/
+
+.title_items{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.title_items span{
+    font-family: sans-serif;
+    text-align: center;
+    color: darkgray;
+}
+
+.items__img2 {
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+    /*Отделяем ее на 15 пикселей*/
+    align-items: center;
+    padding: 0 15px 0 0;
+    
+}
+
+/*footer*/
+
+footer {
+    background: #222224;
+    color: #aaa;
+  }
+.footer2 {
+    background: rgba(244, 244, 244, 0.7);
+    padding: 10% 5% 22% 61%;
+    display: flex;
+    justify-content: flex-start;
+    
+}
+  
+  footer2 .three-column {
+   overflow: hidden;
+  }
+  
+  footer2 .three-column li{
+   width: 33.3333%;
+    float: left;
+    padding: 5px 0;
+  }
+  
+  footer2 .socila-list {
+    overflow: hidden;
+    margin: 20px 0 10px;
+  }
+  
+  footer2 .socila-list li {
+    float: left;
+    margin-right: 3px;
+    opacity: 0.7;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  footer2 .socila-list li:hover {
+    opacity: 1;
+  }
+  
+  footer2 .img-thumbnail {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    margin-bottom: 5px;
+  }
+  
+  footer2 .copyright {
+    background: #333;
+    margin-top: 20px;
+    font-size: 15px;
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/
+    justify-content: space-around;
+    padding: 17px 64% 20px 0px;
+  }
+  
+
+  
+  footer .three-column {
+   overflow: hidden;
+  }
+  
+  footer .three-column li{
+   width: 33.3333%;
+    float: left;
+    padding: 5px 0;
+  }
+  
+  footer .socila-list {
+    overflow: hidden;
+    margin: 20px 0 10px;
+  }
+  
+  footer .socila-list li {
+    float: left;
+    margin-right: 3px;
+    opacity: 0.7;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  footer .socila-list li:hover {
+    opacity: 1;
+  }
+  
+  footer .img-thumbnail {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    margin-bottom: 5px;
+  }
+  
+  footer .copyright {
+    background: #333;
+    font-size: 15px;
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/
+    justify-content: space-around;
+    padding: 17px 64% 20px 0px;
+  }
+  
+  footer .copyright span {
+    color: #0894d1;
+    text-align: center;
+  }
+
+
+/*form*/
+
+.form {
+    /*Делаем, чтобы 2 input встали в ряд - строчно*/
+    /*margin 10px не используем, это костыльный метод.*/
+    display: flex;
+    align-items: center; /*Чтобы по высоте были всегда одинаковые*/
+  }
+  
+  /*Замена input дефолдных на красивые*/
+  input {
+    border: none;
+  }
+  
+  
+  .form__email, .form__btn {
+    padding: 20px; /*Размер окна ввести текст и отправить*/
+  }
+  
+  .form__email {
+    background-color: lightgrey; /*Цвет фона введи текст*/
+    border-radius: 20px 0 0 20px; /*Округление углов*/
+  }
+  
+  .form__email:focus {
+    outline: none; /*Убираем фокус, но это не правильно, таб работать не будет*/
+    background-color: rgb(184, 178, 178);
+     transition: All 0.5s;/*Анимация с задержкой фокуса*/
+  }
+  
+  .form__btn {
+   background-color: rgb(94, 94, 94); /*Нашей кнопке мы дадим тоже фон*/
+   color: white; /*Цвет текста*/
+   border-radius: 0 20px 20px 0; /*Округление углов*/
+  }
+  
+  .form__btn:hover {
+    opacity: 0.6; /*При наведение, чтобы кнопка была декоративной*/
+    transition: all 1s; /*Задержка в 1 секунду*/
+    cursor: pointer; /*Показывает палец при наведение на кнопку отправить*/
+    
+  }
+  
+  .form__btn:focus {
+   background-color: rgb(120, 120, 120); /*Нашей кнопке мы дадим тоже фон*/
+   color: white; /*Цвет текста*/
+  }
+
+/*Fetured Items*/
+
+.items__container {
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/ /*+*/
+    /*background: #f0f0f0;*/
+    flex-wrap: wrap; /*wrap свойства для переноса*/
+    justify-content: space-between;
+    gap: 30px; /*Между дочерними контейнерами сделай расстояние в 30 пикселей*/
+    
+}
+
+.items__fetured{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    background: #f0f0f0;
+}
+
+.items__fetured_2{
+    display: flex;
+    flex-direction: column;
+    max-width: 163px;
+}
+
+.items__container h3 {
+    font-family: sans-serif;
+    /*display: flex;
+    position: relative;*/
+    padding: 0 0 0 15px;
+}
+
+.items__container span {
+    font-family: sans-serif;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 470px 0 35.33px 19px;
+    width: 20%;*/
+    color: darkgrey;
+    padding: 0 0 0 15px;
+}
+
+.items__sale{
+    font-family: sans-serif;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    width: 20%;
+    color: rgb(216, 64, 64);
+    padding: 0 0 0 15px;
+}
+
+/*Footer*/
+
+.footer__container {
+    display: flex; /*Мы сказали родительскому флекс контейнеру переносить все свои элементы если они не помещаются*/
+    flex-wrap: wrap; /*wrap свойства для переноса*/
+    justify-content: space-between;
+    gap: 30px; /*Между дочерними контейнерами сделай расстояние в 30 пикселей*/
+    max-width: 65%;
+}
+
+.footer__container img {
+    padding: 50px;
+}
+
+.footer__container h3 {
+    font-family: sans-serif;
+}
+
+.footer__container span {
+    font-family: sans-serif;
+    color: darkgrey;
+}
