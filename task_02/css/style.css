@@ -1,0 +1,737 @@
+/* Шрифты */
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Black.ttf");
+  font-weight: 900;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Italic.ttf");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Light.ttf");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-LightItalic.ttf");
+  font-weight: 700;
+  font-style: italic; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-Thin.ttf");
+  font-weight: 100;
+  font-style: normal; }
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("../font/Lato-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic; }
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, sans-serif; }
+
+/* header top */
+
+/* Мы шапке сайта добавляем черный цвет //background: #000000;// */
+/* Ограничиваем ее 18 пикселями (Вспоминаем циферблат) */
+
+/* Примеры: */
+
+/** padding:10px 5px 15px 20px; - верхнее поле 10px - правое поле 5px - нижнее поле 15px - левое поле 20px */
+
+/** padding:10px 5px 15px; - верхнее поле 10px - правое и левое поля 5px - нижнее поле 15px */
+
+/** padding:10px 5px; - верхнее и нижнее поля 10px - правое и левое поля 5px */
+
+/** padding:10px; - все четыре поля 10px */
+
+
+/* //position: relative;// Положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения. */
+
+.top {
+  background: #000000;
+  padding: 18px 0; /* Сверху и снизу будет пространства, чтобы иконки не прилипали к верхнему и нижнему краю */
+  position: relative;
+}
+
+/* Создаем контейнер, который ограничивает дальнейшие иконки, картинки и т д в пределах своего размера. */
+
+/* //max-width: 1140px;// Задаем максимальную ширину */
+/* //margin: 0 auto;// Применяют его для выравнивания тела сайта (body) по горизонтали по центру. */
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px; /* 20 пикселей от левого края отступ */
+}
+
+/* Отображаем элементы флексами https://tproger.ru/translations/how-css-flexbox-works/ */
+/* Space-between задаёт одинаковое расстояние между блоками, но не между контейнером и блоками. */
+/* Space-around также задаёт одинаковое расстояние между блоками, но теперь расстояние между контейнером и блоками равно половине расстояния между блоками. */
+/* align-items: center Выравнивание по центру */
+.top-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+/* Выравнивание внутри контейнера элементов по центру */
+
+.box_center {
+  display: flex;
+  justify-content: center; /* Каждый следующий элемент будет в ряд, а не под ним */
+}
+
+/* Все элементы перемещаются в конец */
+
+.box_bottom {
+  align-items: flex-end; 
+}
+
+/* Устанавливает величину отступа от правого края элемента */
+/* То есть Главная и поиск будут иметь пространство от друг друга в 41 пиксель */
+.top__site {
+  margin-right: 41px; 
+}
+
+/* Свойство clip определяет область позиционированного элемента, в которой будет показано его содержимое. 
+Все, что не помещается в эту область, будет обрезано и становится невидимым. 
+На данный момент единственно доступная форма области — прямоугольник. 
+Все остальное остается только в мечтах. clip работает только для абсолютно позиционированных элементов. */
+
+.word-hidden {
+  /* Позиция абсолютная */
+  position: absolute !important;
+  /* Установка размера в 1 px */
+  clip: rect(1px 1px 1px 1px); /* Скрываем слово */
+  /* Для браузеров, которые годятся лишь для запуска госуслуг и подобных сайтов IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.top__ico {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0 33px 0 0;
+  display: block;
+  min-width: 23px;
+  min-height: 23px;
+  fill: #fff;
+  position: relative;
+  border: 1px solid transparent;
+  padding: 3px;
+  border-radius: 3px; 
+}
+.top__ico:active {
+  background: rgba(255, 255, 255, 0.5); 
+}
+.top__ico:hover {
+  border: 1px solid #fff; 
+}
+
+.top__ico:last-child {
+  margin-right: 0; 
+}
+
+.top__ico_btn {
+  outline: none; 
+}
+
+.basket-items {
+  background: #f16d7f; /* Устанавливаем цвет */
+  position: absolute; /* Устанавливаем абсолютная позиция */
+  top: -10px;
+  right: -10px;
+  border-radius: 50%; /* Округляем */
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff; /* Текст внутри кружка белый */  
+  padding: 2px 6px 3px 6px;
+}
+
+/*banner*/
+
+.banner{
+  background: #f1e4e6;
+  margin: 0 0 65px 0;
+}
+
+.banner__box {
+  display: flex; /* Используем флексы */
+  min-height: 365px; /* Минимальная высота элемента */
+  justify-content: flex-end; /*  */
+  position: relative; /*  */ 
+  background-image: url(../img/man.png); /* Изображение */ 
+  background-repeat: no-repeat;
+  background-position: calc(-65% + 75px) 0;
+  background-size: auto 100%; }
+  .banner__box:after {
+    content: '';
+    display: block;
+    padding: 33.5% 0; }
+  @media (max-width: 768px) {
+    .banner__box {
+      align-items: center; 
+  } 
+  }
+  @media (max-width: 600px) {
+    .banner__box {
+      background-image: none;
+      justify-content: center;
+      align-items: center;
+      position: relative; } 
+  }
+
+.banner__txt-decoration {
+      padding-left: 16px; /* Расстояние между полоски и текстом */
+      border-left: 12px solid #f16d7f; /* Слево делаем полоску возле названия */
+      position: absolute; /* Устанавливаем абсолютную позицию */
+      bottom: 50%; /* Спускаем текст вниз */
+      box-sizing: border-box; 
+      min-width: 403px; /* Устанавливаем минимальную ширину 403 пикселя*/
+      width: 40%; /*От правого края перемещаем его на 40%*/
+}
+
+.banner-txt {
+  display: block;
+  color: #222;
+  text-transform: uppercase; 
+}
+
+.banner-txt_lvl1 {
+  /* Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100.
+   Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. */
+  font-weight: 700; 
+  font-size: 48px; /* Размер текста */
+  line-height: 58px; /* Расстояние между текстом */
+  max-width: 300px; /* Ограничение текста на 300 пикселей */
+  word-break:break-all; /* Остальной текст переноситься вниз */
+}
+
+.banner-txt_lvl2 {
+  /* Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100.
+   Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. */
+  font-weight: 700;
+  font-size: 32px; /* Размер текста */
+  line-height: 38px; /* Расстояние между текстом */
+}
+
+.banner-txt_color {
+  color: #f16d7f; /* Слово FASHION мы покрасим в цвет */
+}
+
+/* Test https://tproger.ru/s3/uploads/2017/02/600x313_flex_8.gif */
+/* .test{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/*PROMO*/
+
+.promo {
+  background-color: #F8F3F4;
+  margin: 0 0 20px 0;
+}
+
+.promo_cont {
+  margin: 0 0 20px 0;
+}
+
+.promo__text{
+  font-family: sans-serif;
+  max-width: 206px;
+  width: 50%;
+  /*Добавляем черточку вертикальную рядом с тайтлом*/
+  /*Отделяем ее на 15 пикселей*/
+  padding: 0 0 0 15px;
+}
+
+.promo__cont__class {
+  min-height: 74px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promo__title__category__h1 {
+  font-size: 14px;
+  color: #F16D7F;
+}
+
+.promo__title__category__h2 {
+  font-size: 24px;
+  color: #F16D7F;
+}
+
+.promo__title__category__span {
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+/*Делаем строго фиксированную высоту, но сделаем это только сейчас*/
+.promo__container {
+  min-height: 74px;
+  /*Выравняем по центру*/
+  display: flex;
+  justify-content: flex-start;
+  /*outline: 1px solid green;*/
+  align-items: center;
+}
+
+.promo__container_bk {
+  min-height: 120px;
+  /*Выравняем по центру*/
+  display: flex;
+  justify-content: flex-start;
+  /*outline: 1px solid green;*/
+  align-items: center;
+}
+
+.promo__h1{
+  width: 10%;
+  min-width: 200px;
+  padding: 0px 0px 0 33px;
+  float: left;
+}
+
+.promo__text-block{
+  width: 10%;
+  min-width: 200px;
+  float: right;
+}
+
+.promo__text-blocks{
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  min-width: 200px;
+  float: left;
+}
+
+.aside {
+  width: 75%;
+  /*min-height: 100px;
+  margin: 75px 0 0 0;*/
+  padding: 0px 0px 0 30px;
+  /*background-color: aqua;*/
+  float: left;
+  text-transform: uppercase;
+}
+
+.content {
+  /*width: 22%;*/
+  /*min-height: 100px;
+  margin: 75px 0 0 0;*/
+  /*background-color: bisque;*/
+  /* margin: 0 0 0 30%; */
+  float: right;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.promo__text-blocks2{
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  min-width: 200px;
+  float: left;
+}
+
+.filter__img {
+  /*Добавляем черточку вертикальную рядом с тайтлом*/
+  /*Отделяем ее на 15 пикселей*/
+  align-items: center;
+  display: inline-block;
+  padding: 0 0 0 15px;
+}
+
+.filter__img_bl {
+    /*Добавляем черточку вертикальную рядом с тайтлом*/
+  /*Отделяем ее на 15 пикселей*/
+  align-items: center;
+  padding: 0 0 0 15px;
+}
+
+/* Четыре карточки */
+
+.card-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0 0 30px 0; /* Отделяет пространство до следующего блока */ }
+  @media (max-width: 1180px) {
+.card-box {
+  padding: 0 35px; } }
+  @media (max-width: 480px) {
+.card-box {
+  justify-content: center;
+  align-items: center;
+  flex-flow: column; } 
+}
+
+.card {
+  /*border: 1px solid red;*/
+  background: center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ width: 32%;
+  padding: 9.5% 0; /* Выставляем размер карточек */
+  margin-bottom: 30px; /* Блоки в 30% */ }
+  @media (max-width: 480px) {
+.card {
+  width: 100%;
+  padding: 29.5% 0; } 
+}
+
+.card_wide {
+  padding: 8% 0;
+  width: 100%;
+  background-image: url("../img/for_all.jpg"); }
+
+.card_for-women {
+  background-image: url("../img/for_women.jpg"); }
+
+.card_for-men {
+  background-image: url("../img/for_man.jpg"); }
+
+.card_for-kids {
+  background-image: url("../img/for_kids.jpg"); }
+
+.card__photo-desc {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff; }
+
+.card__photo-desc_color {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f16d7f; }
+
+
+/*Fetured Items*/
+
+.product-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 65px 0; }
+  @media (max-width: 1180px) {
+.product-box {
+  justify-content: space-around; } }
+
+.product-caption {
+  width: 100%;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 6px; }
+
+.product-desc {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 48px; }
+
+/*Карточки*/
+
+.product-card {
+  width: 360px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 7px 30px;
+  padding: 0 0 20px 0;
+  background: #F8F8F8;
+  text-decoration: none; }
+  .product-card:hover .product-card__link:after {
+    visibility: visible; }
+  .product-card:hover .product__add-btn {
+    visibility: visible; }
+
+.product-card__link {
+  text-decoration: none;
+  position: relative; 
+}
+
+.product-card__link:after {
+  content: '';
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden; 
+}
+
+.product-card__img {
+  width: 360px;
+  height: 420px;
+  display: block;
+  margin: 0 0 24px 0; }
+
+.product-card__name {
+  display: block;
+  margin: 0 0 12px 0;
+  padding: 0 18px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000; }
+
+.product-card__desc {
+  margin: 0 0 18px 0;
+  padding: 0 16px;
+  font-weight: 300;
+  color: #5d5d5d; }
+
+.product-card__price {
+  padding: 0 18px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f16d7f; }
+
+/* Кнопка */
+
+.single {
+  display: block;
+  width: 100%; }
+
+.single_center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.product__btn {
+  text-transform: capitalize;
+  margin: 18px auto 0;
+  padding: 14px 38px;
+  font-size: 16px;
+  line-height: 19px;
+  background: transparent;
+  color: #F26376;
+  border: 1px solid #FF6A6A;
+  outline: none; }
+.product__btn:hover {
+  background: #F16D7F;
+  color: #FFFFFF; }
+.product__btn:active {
+  background: transparent;
+  color: #f26376; }
+
+/*footer*/
+
+.footer {
+  width: 100%;
+  background: #222224; }
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px; }
+  @media (max-width: 480px) {
+.footer__bottom {
+      flex-flow: column;
+      padding: 43px 20px 24px; } }
+
+.footer__card-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 104px 20px; }
+  @media (max-width: 768px) {
+.footer__card-box {
+      padding: 48px 20px 64px;
+      flex-flow: column; } }
+
+.footer__card {
+  margin: 0;
+  width: 32%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 768px) {
+.footer__card {
+      width: 100%;
+      margin-bottom: 48px; }
+.footer__card:last-child {
+        margin-bottom: 0; } }
+
+.footer__thumb {
+  margin: 0 auto 23px;
+  fill: #f16d7f; }
+
+.footer__txt {
+  color: #fbfbfb;
+  font-weight: 400;
+  text-align: center; }
+
+.footer__txt_name {
+  font-size: 19.96px;
+  line-height: 24px;
+  margin-bottom: 16px; }
+
+.footer__txt_desc {
+  font-weight: 300; }
+
+.footer__subscribe {
+  background: 25% center / cover no-repeat;
+  background-image: linear-gradient(rgba(244, 244, 244, 0.7), rgba(244, 244, 244, 0.7)), url("../img/subscribe_bg.png"); }
+
+.footer__subscribe-box {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (max-width: 768px) {
+.footer__subscribe-box {
+      flex-flow: column;
+      justify-content: center;
+      padding: 54px 0 140px; } }
+
+.footer__subscribe-card {
+  display: block;
+  padding: 86px 0 126px;
+  margin: 0; }
+  @media (max-width: 768px) {
+.footer__subscribe-card {
+      padding: 0;
+      margin-bottom: 48px; }
+.footer__subscribe-card:last-child {
+        margin-bottom: 0; } }
+
+/* ---  */
+
+.subscribe__quote {
+  max-width: 360px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222224; }
+
+.subscribe__photo {
+  display: block;
+  margin: 0 auto 30px; }
+
+.subscribe__desc {
+  color: #222224;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30.1px;
+  display: block;
+  margin: 0 auto;
+  text-transform: uppercase; }
+
+.subscribe__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40.1px; }
+
+.subscribe__email-box {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 0; }
+  @media (max-width: 768px) {
+    .subscribe__email-box {
+      margin-top: 27px; } }
+
+.subscribe__email {
+  box-sizing: border-box;
+  width: 256px;
+  outline: none;
+  display: block;
+  padding: 15px 22px;
+  background: #e1e1e1;
+  border: none;
+  border-radius: 30px 0 0 30px; }
+  @media (max-width: 480px) {
+    .subscribe__email {
+      width: 100%; } }
+
+.subscribe__btn {
+  outline: none;
+  border: none;
+  background: #f16d7f;
+  color: #ffffff;
+  padding: 15px 22px;
+  border-radius: 0 30px 30px 0; }
+.subscribe__btn:hover {
+    background: #e05c6e; }
+.subscribe__btn:active {
+    background: #f16d7f; }
+
+/**/
+
+.right-txt {
+  font-size: 16px;
+  line-height: 19px;
+  color: #FBFBFB;
+  text-transform: capitalize; }
+  @media (max-width: 480px) {
+.right-txt {
+  order: 2;
+  margin-top: 25px; } }
+
+.box_bottom { 
+  align-items: flex-end; }
+
+.social-link {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 7px;
+  text-decoration: none;
+  background-color: #fff;
+  fill: #000; }
+.social-link:hover {
+  background-color: #f16d7f;
+  fill: #fff; }
+.social-link:active {
+  background-color: #fff;
+  fill: #000; }
+            
+.social-link:last-child {
+  margin-right: 0; }
