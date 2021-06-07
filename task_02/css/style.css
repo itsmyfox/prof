@@ -286,7 +286,7 @@
 }
 
 .promo__title__category__h1 {
-  font-size: 14px;
+  font-size: 16px;
   color: #F16D7F;
 }
 
@@ -342,6 +342,16 @@
 
 .aside {
   width: 75%;
+  /*min-height: 100px;
+  margin: 75px 0 0 0;*/
+  padding: 0px 0px 0 30px;
+  /*background-color: aqua;*/
+  float: left;
+  text-transform: uppercase;
+}
+
+.aside__next {
+  width: 36%;
   /*min-height: 100px;
   margin: 75px 0 0 0;*/
   padding: 0px 0px 0 30px;
@@ -544,19 +554,23 @@
 .product__btn {
   text-transform: capitalize;
   margin: 18px auto 0;
-  padding: 14px 38px;
+  padding: 14px 0px;
   font-size: 16px;
   line-height: 19px;
   background: transparent;
-  color: #F26376;
-  border: 1px solid #FF6A6A;
+  color: #EBEBEB;
+  border: 1px solid #EBEBEB;
   outline: none; }
-.product__btn:hover {
-  background: #F16D7F;
-  color: #FFFFFF; }
 .product__btn:active {
-  background: transparent;
-  color: #f26376; }
+  background: transparent; }
+
+  .vector_left {
+    padding: 0px 10px 0px 50px;
+  }
+
+  .vector_right {
+    padding: 0px 50px 0px 10px;
+  }
 
 /*footer*/
 
